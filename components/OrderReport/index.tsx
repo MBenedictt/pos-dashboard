@@ -101,7 +101,7 @@ export default function OrderReport() {
         <div className="w-full flex-1 bg-[#1F1D2B] mt-4 rounded-lg flex flex-col overflow-hidden h-full">
             <div className="flex items-center justify-between p-6 flex-none">
                 <h2 className="text-2xl font-semibold">Order Report</h2>
-                <Button variant="outline" className="bg-transparent border border-[#393C49] cursor-pointer text-white hover:bg-[#393C49]">
+                <Button variant="outline" className="bg-transparent border border-[#393C49] cursor-pointer text-white hover:bg-white">
                     <Settings2 className="mr-2 h-4 w-4" />Filter Order
                 </Button>
             </div>

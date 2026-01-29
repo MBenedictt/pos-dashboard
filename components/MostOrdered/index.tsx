@@ -13,7 +13,6 @@ interface DishItem {
     image: string
 }
 
-
 export default function MostOrdered() {
     const dishes: DishItem[] = [
         {

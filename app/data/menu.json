@@ -1,0 +1,290 @@
+[
+  {
+    "id": "1",
+    "category": "Hot Dishes",
+    "name": "Tomato Pasta",
+    "price": 43000,
+    "available": 20,
+    "image": "https://foodish-api.com/images/pasta/pasta1.jpg"
+  },
+  {
+    "id": "2",
+    "category": "Hot Dishes",
+    "name": "Chicken Biryani Platter",
+    "price": 38000,
+    "available": 11,
+    "image": "https://foodish-api.com/images/biryani/biryani50.jpg"
+  },
+  {
+    "id": "3",
+    "category": "Hot Dishes",
+    "name": "Margherita Pizza",
+    "price": 65000,
+    "available": 16,
+    "image": "https://foodish-api.com/images/pizza/pizza20.jpg"
+  },
+  {
+    "id": "4",
+    "category": "Hot Dishes",
+    "name": "Hongkong Fried Rice",
+    "price": 57000,
+    "available": 15,
+    "image": "https://foodish-api.com/images/rice/rice5.jpg"
+  },
+  {
+    "id": "5",
+    "category": "Hot Dishes",
+    "name": "Fat Beef Patty Burger",
+    "price": 46000,
+    "available": 17,
+    "image": "https://foodish-api.com/images/burger/burger9.jpg"
+  },
+  {
+    "id": "6",
+    "category": "Hot Dishes",
+    "name": "Spicy Seafood Noodles",
+    "price": 48000,
+    "available": 12,
+    "image": "https://foodish-api.com/images/pasta/pasta1.jpg"
+  },
+  {
+    "id": "7",
+    "category": "Cold Dishes",
+    "name": "Fresh Berry Smoothie Bowl",
+    "price": 35000,
+    "available": 14,
+    "image": "https://foodish-api.com/images/dessert/dessert24.jpg"
+  },
+  {
+    "id": "8",
+    "category": "Cold Dishes",
+    "name": "Tropical Fruit Salad",
+    "price": 28000,
+    "available": 20,
+    "image": "https://foodish-api.com/images/dessert/dessert24.jpg"
+  },
+  {
+    "id": "9",
+    "category": "Cold Dishes",
+    "name": "Iced Lemon Jelly",
+    "price": 22000,
+    "available": 18,
+    "image": "https://foodish-api.com/images/dessert/dessert24.jpg"
+  },
+  {
+    "id": "10",
+    "category": "Cold Dishes",
+    "name": "Cold Tuna Salad",
+    "price": 45000,
+    "available": 10,
+    "image": "https://foodish-api.com/images/dessert/dessert24.jpg"
+  },
+  {
+    "id": "11",
+    "category": "Cold Dishes",
+    "name": "Mixed Berry Parfait",
+    "price": 32000,
+    "available": 15,
+    "image": "https://foodish-api.com/images/dessert/dessert24.jpg"
+  },
+  {
+    "id": "12",
+    "category": "Cold Dishes",
+    "name": "Signature Cold Platter",
+    "price": 55000,
+    "available": 8,
+    "image": "https://foodish-api.com/images/dessert/dessert24.jpg"
+  },
+  {
+    "id": "13",
+    "category": "Soup",
+    "name": "Creamy Butter Chicken Soup",
+    "price": 42000,
+    "available": 16,
+    "image": "https://foodish-api.com/images/butter-chicken/butter-chicken20.jpg"
+  },
+  {
+    "id": "14",
+    "category": "Soup",
+    "name": "Spicy Pumpkin Soup",
+    "price": 38000,
+    "available": 14,
+    "image": "https://foodish-api.com/images/butter-chicken/butter-chicken20.jpg"
+  },
+  {
+    "id": "15",
+    "category": "Soup",
+    "name": "Mushroom Cream Soup",
+    "price": 35000,
+    "available": 22,
+    "image": "https://foodish-api.com/images/butter-chicken/butter-chicken20.jpg"
+  },
+  {
+    "id": "16",
+    "category": "Soup",
+    "name": "Hot & Sour Seafood Soup",
+    "price": 48000,
+    "available": 10,
+    "image": "https://foodish-api.com/images/butter-chicken/butter-chicken20.jpg"
+  },
+  {
+    "id": "17",
+    "category": "Soup",
+    "name": "Corn & Chicken Soup",
+    "price": 30000,
+    "available": 18,
+    "image": "https://foodish-api.com/images/butter-chicken/butter-chicken20.jpg"
+  },
+  {
+    "id": "18",
+    "category": "Soup",
+    "name": "Traditional Beef Stew",
+    "price": 52000,
+    "available": 12,
+    "image": "https://foodish-api.com/images/butter-chicken/butter-chicken20.jpg"
+  },
+  {
+    "id": "19",
+    "category": "Grill",
+    "name": "BBQ Beef Burger",
+    "price": 62000,
+    "available": 25,
+    "image": "https://foodish-api.com/images/burger/burger60.jpg"
+  },
+  {
+    "id": "20",
+    "category": "Grill",
+    "name": "Grilled Chicken Steak",
+    "price": 58000,
+    "available": 15,
+    "image": "https://foodish-api.com/images/burger/burger60.jpg"
+  },
+  {
+    "id": "21",
+    "category": "Grill",
+    "name": "Double Cheese Burger",
+    "price": 68000,
+    "available": 10,
+    "image": "https://foodish-api.com/images/burger/burger60.jpg"
+  },
+  {
+    "id": "22",
+    "category": "Grill",
+    "name": "Spicy Grilled Ribs",
+    "price": 85000,
+    "available": 8,
+    "image": "https://foodish-api.com/images/burger/burger60.jpg"
+  },
+  {
+    "id": "23",
+    "category": "Grill",
+    "name": "Grilled Salmon Fillet",
+    "price": 95000,
+    "available": 6,
+    "image": "https://foodish-api.com/images/burger/burger60.jpg"
+  },
+  {
+    "id": "24",
+    "category": "Grill",
+    "name": "Smoked Beef Brisket",
+    "price": 75000,
+    "available": 12,
+    "image": "https://foodish-api.com/images/burger/burger60.jpg"
+  },
+  {
+    "id": "25",
+    "category": "Appetizer",
+    "name": "Steamed Rice Cakes",
+    "price": 25000,
+    "available": 30,
+    "image": "https://foodish-api.com/images/idly/idly41.jpg"
+  },
+  {
+    "id": "26",
+    "category": "Appetizer",
+    "name": "Crispy Spring Rolls",
+    "price": 28000,
+    "available": 25,
+    "image": "https://foodish-api.com/images/idly/idly41.jpg"
+  },
+  {
+    "id": "27",
+    "category": "Appetizer",
+    "name": "Garlic Bread Sticks",
+    "price": 20000,
+    "available": 40,
+    "image": "https://foodish-api.com/images/idly/idly41.jpg"
+  },
+  {
+    "id": "28",
+    "category": "Appetizer",
+    "name": "Spicy Tofu Bites",
+    "price": 18000,
+    "available": 35,
+    "image": "https://foodish-api.com/images/idly/idly41.jpg"
+  },
+  {
+    "id": "29",
+    "category": "Appetizer",
+    "name": "Chicken Wings",
+    "price": 35000,
+    "available": 20,
+    "image": "https://foodish-api.com/images/idly/idly41.jpg"
+  },
+  {
+    "id": "30",
+    "category": "Appetizer",
+    "name": "Nachos Supreme",
+    "price": 42000,
+    "available": 18,
+    "image": "https://foodish-api.com/images/idly/idly41.jpg"
+  },
+  {
+    "id": "31",
+    "category": "Dessert",
+    "name": "Choco Cake with Berries",
+    "price": 30000,
+    "available": 22,
+    "image": "https://foodish-api.com/images/dessert/dessert5.jpg"
+  },
+  {
+    "id": "32",
+    "category": "Dessert",
+    "name": "Dark Chocolate Mousse",
+    "price": 35000,
+    "available": 18,
+    "image": "https://foodish-api.com/images/dessert/dessert5.jpg"
+  },
+  {
+    "id": "33",
+    "category": "Dessert",
+    "name": "Molten Lava Cake",
+    "price": 38000,
+    "available": 15,
+    "image": "https://foodish-api.com/images/dessert/dessert5.jpg"
+  },
+  {
+    "id": "34",
+    "category": "Dessert",
+    "name": "Tiramisu Slice",
+    "price": 32000,
+    "available": 20,
+    "image": "https://foodish-api.com/images/dessert/dessert5.jpg"
+  },
+  {
+    "id": "35",
+    "category": "Dessert",
+    "name": "Red Velvet Cake",
+    "price": 36000,
+    "available": 12,
+    "image": "https://foodish-api.com/images/dessert/dessert5.jpg"
+  },
+  {
+    "id": "36",
+    "category": "Dessert",
+    "name": "Vanilla Bean Cheesecake",
+    "price": 40000,
+    "available": 10,
+    "image": "https://foodish-api.com/images/dessert/dessert5.jpg"
+  }
+]

@@ -7,13 +7,13 @@ interface SidebarProps {
 
 export default function Sidebar({ activeNav, setActiveNav }: SidebarProps) {
     const navItems = [
-        { id: 'home', icon: Home, label: 'Home' },
-        { id: 'orders', icon: ChartPie, label: 'Orders' },
-        { id: 'settings', icon: Settings, label: 'Settings' },
+        { id: 'order', icon: Home, label: 'Order' },
+        { id: 'dashboard', icon: ChartPie, label: 'Dashboard' },
+        { id: 'menu', icon: Settings, label: 'Menu' },
     ]
 
     return (
-        <aside className="w-20 sticky top-0 left-0 h-screen flex flex-col items-center py-6 space-y-6 bg-[#1F1D2B]">
+        <aside className="w-20 sticky top-0 left-0 h-screen flex flex-col items-center py-6 space-y-6 bg-[#1F1D2B] rounded-r-lg">
             {/* Logo */}
             <div className="w-12 h-12 rounded-lg bg-[#EB966A]/20 flex items-center justify-center">
                 <Store className="w-8 h-8 text-[#FFB800]" />
