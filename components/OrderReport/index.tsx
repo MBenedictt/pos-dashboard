@@ -98,7 +98,7 @@ export default function OrderReport() {
     }
 
     return (
-        <div className="w-full bg-[#1F1D2B] mt-4 rounded-lg flex flex-col overflow-hidden h-[400px] xl:h-full">
+        <div className="w-full bg-[#1F1D2B] mt-4 rounded-lg flex flex-col overflow-hidden h-[600px] xl:h-full">
             <div className="flex items-center justify-between p-6 flex-none max-sm:flex-col max-sm:items-start max-sm:gap-4">
                 <h2 className="text-2xl font-semibold">Order Report</h2>
                 <Button variant="outline" className="bg-transparent border border-[#393C49] cursor-pointer text-white hover:bg-white/10">
