@@ -14,7 +14,7 @@ const data = [
 export default function MostTypeOrder() {
     return (
         <div className="w-full bg-[#1F1D2B] p-6 rounded-lg flex flex-col h-full">
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between max-sm:flex-col max-sm:items-start max-sm:gap-4">
                 <h1 className="text-xl font-semibold">Most Type of Order</h1>
                 <Button variant="outline" className="bg-transparent border border-[#393C49] text-white cursor-pointer">
                     <ChevronDown className="mr-2 h-4 w-4" />Today

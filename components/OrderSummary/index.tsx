@@ -39,7 +39,7 @@ export default function OrderSummary({
             <div className="flex-none">
                 <h2 className="text-xl font-semibold mb-6">Orders #{orderNumber}</h2>
 
-                <div className="flex gap-3 mb-6">
+                <div className="flex gap-3 mb-6 max-lg:flex-col">
                     {['Dine In', 'Take It', 'Delivery'].map((type) => (
                         <button
                             key={type}

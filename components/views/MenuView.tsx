@@ -26,7 +26,7 @@ export default function MenuView() {
             <div className="flex-1 bg-[#1F1D2B] rounded-lg flex flex-col min-h-0 shadow-lg">
 
                 <div className="p-6 pb-0">
-                    <div className="flex justify-between items-center mb-8">
+                    <div className="flex justify-between items-center mb-8 max-sm:flex-col max-sm:items-start max-sm:gap-4">
                         <h2 className="text-xl font-semibold text-white">Products Management</h2>
                         <Button
                             variant="outline"
@@ -36,7 +36,7 @@ export default function MenuView() {
                         </Button>
                     </div>
 
-                    <div className="flex gap-8 border-b border-[#393C49] mb-8 overflow-x-auto custom-scrollbar">
+                    <div className="flex gap-8 border-b border-[#393C49] mb-8 overflow-x-auto custom-scrollbar max-lg:flex-wrap max-lg:gap-x-4 max-lg:gap-y-2">
                         {categories.map((cat) => (
                             <button
                                 key={cat}

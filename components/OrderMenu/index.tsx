@@ -19,7 +19,7 @@ export default function OrderMenu({ onAddItem }: MenuSectionProps) {
     return (
         <div className="flex flex-col h-full">
             <div className="flex-none">
-                <div className="mb-6 mt-6 flex gap-8 overflow-x-auto custom-scrollbar">
+                <div className="mb-6 mt-6 flex gap-8 overflow-x-auto custom-scrollbar max-lg:flex-wrap max-lg:gap-4">
                     {categories.map((category) => (
                         <button
                             key={category}
@@ -34,7 +34,7 @@ export default function OrderMenu({ onAddItem }: MenuSectionProps) {
                     ))}
                 </div>
 
-                <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center justify-between mb-6 max-md:flex-col max-md:gap-4 max-md:items-start">
                     <h3 className="text-xl font-semibold text-white">Choose Dishes</h3>
                     <Button variant="outline" className="bg-[#1F1D2B] p-4 border border-[#393C49] text-white cursor-pointer">
                         <ChevronDown className="mr-2 h-4 w-4" />Dine In

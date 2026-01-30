@@ -51,12 +51,12 @@ export default function OrderView({ formattedDate }: { formattedDate: string }) 
     return (
         <div className="flex-1 flex overflow-y-auto">
             <div className="w-8/12 h-full flex flex-col p-6 overflow-hidden">
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between items-center max-sm:flex-col max-sm:items-start max-sm:gap-4 mb-6">
                     <div>
                         <h1 className="text-3xl font-bold">Made Resto</h1>
                         <h4 className="text-[#ABBBC2] mt-1">{formattedDate}</h4>
                     </div>
-                    <div className="relative w-1/2 max-w-sm">
+                    <div className="relative w-1/2 max-w-sm max-sm:w-full">
                         <SearchIcon className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-100" />
 
                         <Input className="pl-10 py-6" placeholder="Search for food, coffee, etc.." type="search" />

@@ -69,7 +69,7 @@ export default function MostOrdered() {
                 `}
         >
             <div className="flex-none">
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between max-sm:flex-col max-sm:items-start max-sm:gap-4">
                     <h1 className="text-2xl font-semibold">Most Ordered</h1>
                     <Button variant="outline" className="bg-transparent border border-[#393C49] text-white cursor-pointer">
                         <ChevronDown className="mr-2 h-4 w-4" />Today
