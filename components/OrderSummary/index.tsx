@@ -39,7 +39,7 @@ export default function OrderSummary({
             <div className="flex-none">
                 <h2 className="text-xl font-semibold mb-6">Orders #{orderNumber}</h2>
 
-                <div className="flex gap-3 mb-6 max-lg:flex-col">
+                <div className="flex gap-3 mb-6 max-lg:flex-wrap">
                     {['Dine In', 'Take It', 'Delivery'].map((type) => (
                         <button
                             key={type}
@@ -61,7 +61,7 @@ export default function OrderSummary({
                 </div>
             </div>
 
-            <div className="flex-1 overflow-y-auto pr-2 custom-scrollbar space-y-6">
+            <div className="flex-1 overflow-y-auto custom-scrollbar space-y-6">
                 {cart.length === 0 ? (
                     <div className="h-full flex flex-col items-center justify-center text-gray-500">
                         <p>No items added yet</p>
@@ -104,7 +104,7 @@ export default function OrderSummary({
                                     </div>
                                 </div>
 
-                                <div className="w-1/3 text-right font-medium text-gray-100">
+                                <div className="w-1/3 text-right font-medium text-gray-100 max-lg:text-sm">
                                     Rp. {(item.price * item.quantity).toLocaleString('id-ID')}
                                 </div>
                             </div>

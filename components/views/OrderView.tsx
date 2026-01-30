@@ -52,9 +52,9 @@ export default function OrderView({ formattedDate }: { formattedDate: string }) 
     const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
 
     return (
-        <div className="relative flex-1 flex overflow-y-auto max-lg:flex-col">
+        <div className="relative flex-1 flex overflow-y-auto max-md:flex-col">
 
-            <div className="fixed bottom-6 right-6 z-40 lg:hidden">
+            <div className="fixed bottom-6 right-6 z-40 md:hidden">
                 <Button
                     onClick={() => setShowPayment(true)}
                     className="w-16 h-16 rounded-full bg-[#FFCA40] hover:bg-[#FFCA40]/90 text-white shadow-2xl relative border-4 border-[#1F1D2B]/50"
@@ -69,7 +69,7 @@ export default function OrderView({ formattedDate }: { formattedDate: string }) 
                 </Button>
             </div>
 
-            <div className="w-8/12 h-full flex flex-col p-6 overflow-hidden max-lg:w-full">
+            <div className="w-8/12 h-full flex flex-col p-6 overflow-hidden max-lg:w-7/12 max-md:w-full">
                 <div className="flex justify-between items-center max-sm:flex-col max-sm:items-start max-sm:gap-4 mb-6">
                     <div>
                         <h1 className="text-3xl font-bold">Made Resto</h1>
@@ -84,7 +84,7 @@ export default function OrderView({ formattedDate }: { formattedDate: string }) 
                 <OrderMenu onAddItem={addToCart} />
             </div>
 
-            <div className="w-4/12 h-full bg-[#1F1D2B] rounded-l-lg p-6 max-lg:w-0 max-lg:hidden border-l border-[#1F1D2B]">
+            <div className="w-4/12 h-full bg-[#1F1D2B] rounded-l-lg p-6 max-lg:w-5/12 max-md:w-0 max-md:hidden border-l border-[#1F1D2B]">
                 <OrderSummary
                     cart={cart}
                     orderNumber={orderNumber}
