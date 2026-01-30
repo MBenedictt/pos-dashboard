@@ -14,12 +14,10 @@ export default function Sidebar({ activeNav, setActiveNav }: SidebarProps) {
 
     return (
         <aside className="w-20 sticky top-0 left-0 h-screen flex flex-col items-center py-6 space-y-6 bg-[#1F1D2B] rounded-r-lg">
-            {/* Logo */}
             <div className="w-12 h-12 rounded-lg bg-[#EB966A]/20 flex items-center justify-center">
                 <Store className="w-8 h-8 text-[#FFB800]" />
             </div>
 
-            {/* Navigation */}
             <nav className="flex-1 flex flex-col space-y-4">
                 {navItems.map((item) => {
                     const Icon = item.icon
@@ -40,7 +38,6 @@ export default function Sidebar({ activeNav, setActiveNav }: SidebarProps) {
                 })}
             </nav>
 
-            {/* Logout */}
             <button className="w-12 h-12 rounded-lg text-[#FFCA40] hover:bg-destructive/20 hover:text-destructive flex items-center justify-center transition-all cursor-pointer">
                 <LogOut className="w-6 h-6" />
             </button>

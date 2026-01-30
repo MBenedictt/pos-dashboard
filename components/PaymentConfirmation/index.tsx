@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { CreditCard, Wallet, Banknote, Plus, CheckCircle2, ArrowLeft, Trash2 } from "lucide-react";
+import { CreditCard, Wallet, Banknote, Plus, CheckCircle2, ArrowLeft, Trash2, X } from "lucide-react";
 
 import { useState } from "react";
 import Image from "next/image";
@@ -33,11 +33,11 @@ export default function PaymentConfirmation({ isOpen, onClose, cart, subtotal, o
 
             <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={onClose} />
 
-            <div className={`absolute top-0 right-0 h-full w-[850px] bg-[#1F1D2B] shadow-2xl transform transition-transform duration-300 flex overflow-hidden ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+            <div className={`absolute top-0 right-0 h-full w-full lg:w-[850px] bg-[#1F1D2B] shadow-2xl transform transition-transform duration-300 flex flex-col lg:flex-row overflow-y-auto lg:overflow-hidden ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
 
-                <div className="w-[45%] flex flex-col border-r border-[#393C49] pt-6 pb-6 pl-6 pr-4">
+                <div className="w-full lg:w-[45%] flex flex-col border-b md:border-b-0 md:border-r border-[#393C49] p-6 shrink-0">
                     <div className="flex-none mb-6">
-                        <Button variant="ghost" className="p-0 ml-[-1rem] hover:bg-transparent text-gray-400 mb-4 hover:text-white cursor-pointer" onClick={onClose}>
+                        <Button variant="ghost" className="p-0 -ml-3 hover:bg-transparent text-gray-400 mb-4 hover:text-white cursor-pointer" onClick={onClose}>
                             <ArrowLeft className="w-6 h-6" />
                         </Button>
                         <div className="flex justify-between items-start">
@@ -51,7 +51,7 @@ export default function PaymentConfirmation({ isOpen, onClose, cart, subtotal, o
                         </div>
                     </div>
 
-                    <div className="flex-1 overflow-y-auto pr-2 custom-scrollbar space-y-4">
+                    <div className="flex-1 md:overflow-y-auto max-h-60 md:max-h-none overflow-y-auto pr-2 custom-scrollbar space-y-4">
                         {cart.map((item) => (
                             <div key={item.id} className="border-b border-[#393C49] pb-4 last:border-0">
                                 <div className="flex justify-between items-start mb-2">
@@ -60,12 +60,12 @@ export default function PaymentConfirmation({ isOpen, onClose, cart, subtotal, o
                                             <Image src={item.image} alt={item.name} fill className="object-cover" />
                                         </div>
                                         <div className="min-w-0">
-                                            <p className="text-sm font-medium text-white truncate w-32">{item.name}</p>
+                                            <p className="text-sm font-medium text-white truncate w-24 sm:w-32">{item.name}</p>
                                             <p className="text-xs text-gray-400">Rp. {item.price.toLocaleString('id-ID')}</p>
                                         </div>
                                     </div>
-                                    <div className="text-right flex items-center gap-4">
-                                        <div className="bg-[#2D303E] border border-[#393C49] text-white px-3 py-1 rounded-lg text-sm font-medium">
+                                    <div className="text-right flex items-center gap-2 sm:gap-4">
+                                        <div className="bg-[#2D303E] border border-[#393C49] text-white px-2 sm:px-3 py-1 rounded-lg text-sm font-medium">
                                             {item.quantity}
                                         </div>
                                         <p className="text-sm font-semibold text-white">
@@ -97,7 +97,7 @@ export default function PaymentConfirmation({ isOpen, onClose, cart, subtotal, o
                     </div>
                 </div>
 
-                <div className="flex-1 flex flex-col bg-[#1F1D2B] pt-6 pb-6 px-6">
+                <div className="w-full md:flex-1 flex flex-col bg-[#1F1D2B] p-6">
                     <div className="flex-none mb-8 border-b border-[#393C49] pb-4">
                         <h2 className="text-2xl font-bold text-white">Payment</h2>
                         <p className="text-gray-400 text-sm mt-1">3 payment method available</p>
@@ -131,7 +131,7 @@ export default function PaymentConfirmation({ isOpen, onClose, cart, subtotal, o
                         </div>
                     </div>
 
-                    <div className="flex-1 space-y-4 overflow-y-auto custom-scrollbar pr-2">
+                    <div className="flex-1 md:overflow-y-auto custom-scrollbar pr-2 space-y-4 mb-6">
                         <div className="space-y-2">
                             <label className="text-sm font-medium text-white">Cardholder Name</label>
                             <Input placeholder="Test Programmer" className="bg-[#2D303E] border-[#393C49] text-white h-12 mt-1" />
@@ -167,7 +167,7 @@ export default function PaymentConfirmation({ isOpen, onClose, cart, subtotal, o
                         </div>
                     </div>
 
-                    <div className="flex-none flex gap-4 mt-6 pt-4 border-t border-[#393C49]">
+                    <div className="flex-none flex gap-4 pt-4 border-t border-[#393C49]">
                         <Button
                             variant="outline"
                             className="flex-1 h-12 border-[#FFCA40] text-[#FFCA40] bg-transparent hover:bg-[#FFCA40]/10 hover:text-white transition-colors cursor-pointer"

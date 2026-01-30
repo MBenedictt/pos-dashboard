@@ -26,7 +26,7 @@ export default function AddDishModal({ isOpen, onClose, onSuccess }: AddDishModa
 
             <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={onClose} />
 
-            <div className={`absolute top-0 right-0 h-full w-[450px] bg-[#1F1D2B] shadow-2xl transform transition-transform duration-300 flex flex-col ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+            <div className={`absolute top-0 right-0 h-full w-full lg:w-[450px] bg-[#1F1D2B] shadow-2xl transform transition-transform duration-300 flex flex-col ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
 
                 <div className="flex-none p-6 pb-0">
                     <div className="flex justify-between items-center mb-6">
