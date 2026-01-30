@@ -23,7 +23,7 @@ export default function MostTypeOrder() {
 
             <Separator className="mt-5 mb-2 bg-[#393C49]" />
 
-            <div className="flex flex-row items-center justify-center flex-1 gap-6">
+            <div className="flex flex-row max-xl:flex-col items-center justify-center flex-1 gap-6">
 
                 <div className="relative w-[180px] h-[180px] min-w-[180px] min-h-[180px]">
                     <ResponsiveContainer width="100%" height="100%">

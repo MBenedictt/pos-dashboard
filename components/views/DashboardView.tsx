@@ -6,14 +6,14 @@ import { ArrowDown, ArrowUp, BookmarkMinus, CircleDollarSign, Users } from "luci
 
 export default function DashboardView({ formattedDate }: { formattedDate: string }) {
     return (
-        <div className="flex-1 flex overflow-y-auto p-6 space-x-6">
-            <div className="w-8/12 h-full flex flex-col">
+        <div className="flex-1 flex overflow-y-auto p-6 space-x-6 max-lg:space-x-0 max-lg:space-y-6 max-lg:flex-col">
+            <div className="w-8/12 h-full flex flex-col max-lg:w-full">
                 <h1 className="text-3xl font-bold">Dashboard</h1>
                 <h4 className="text-[#ABBBC2] mt-1">{formattedDate}</h4>
 
                 <Separator className="my-4 bg-[#393C49]" />
 
-                <div className="grid grid-cols-3 gap-4 mt-4">
+                <div className="grid grid-cols-3 gap-4 mt-4 max-lg:grid-cols-1">
                     <div className="p-4 bg-[#1F1D2B] rounded-lg">
                         <div className="flex items-center">
                             <div className="w-10 h-10 rounded-lg bg-[#252836] flex items-center justify-center">
@@ -63,7 +63,7 @@ export default function DashboardView({ formattedDate }: { formattedDate: string
 
                 <OrderReport />
             </div>
-            <div className="w-4/12 h-full relative flex flex-col">
+            <div className="w-4/12 max-lg:w-full h-full relative flex flex-col">
                 <MostOrdered />
                 <MostTypeOrder />
             </div>

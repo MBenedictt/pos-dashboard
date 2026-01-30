@@ -6,7 +6,6 @@ import { Button } from "../ui/button";
 import Image from 'next/image';
 import menuData from '../../app/data/menu.json';
 import DishForm from '../DishForm';
-import SuccessModal from '../SuccessModal';
 import DishSuccessModal from '../DishSuccessModal';
 
 export default function MenuView() {

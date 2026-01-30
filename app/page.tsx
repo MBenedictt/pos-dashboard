@@ -31,7 +31,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex h-screen bg-[#252836] text-white">
+    <div className="flex h-screen max-xl:h-full bg-[#252836] text-white">
       <Sidebar activeNav={activeNav} setActiveNav={setActiveNav} />
 
       {renderContent()}
