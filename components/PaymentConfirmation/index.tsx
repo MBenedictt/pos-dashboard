@@ -5,6 +5,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
+import { useOrder } from "@/app/context/orderContext";
 
 interface OrderItem {
     id: string;
@@ -27,6 +28,10 @@ interface PaymentConfirmationProps {
 
 export default function PaymentConfirmation({ isOpen, onClose, cart, subtotal, orderNumber, onUpdateQuantity, onSuccess }: PaymentConfirmationProps) {
     const [paymentMethod, setPaymentMethod] = useState<'Card' | 'Paypal' | 'Cash'>('Card');
+    const { addOrder } = useOrder();
+    const [customerName, setCustomerName] = useState('')
+    const [orderType, setOrderType] = useState('Dine In')
+    const [tableNo, setTableNo] = useState('')
 
     return (
         <div className={`fixed inset-0 z-50 transition-opacity duration-300 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
@@ -134,7 +139,7 @@ export default function PaymentConfirmation({ isOpen, onClose, cart, subtotal, o
                     <div className="flex-1 md:overflow-y-auto custom-scrollbar pr-2 space-y-4 mb-6">
                         <div className="space-y-2">
                             <label className="text-sm font-medium text-white">Cardholder Name</label>
-                            <Input placeholder="Test Programmer" className="bg-[#2D303E] border-[#393C49] text-white h-12 mt-1" />
+                            <Input placeholder="Test Programmer" value={customerName} onChange={(e) => setCustomerName(e.target.value)} className="bg-[#2D303E] border-[#393C49] text-white h-12 mt-1" />
                         </div>
                         <div className="space-y-2">
                             <label className="text-sm font-medium text-white">Card Number</label>
@@ -154,7 +159,7 @@ export default function PaymentConfirmation({ isOpen, onClose, cart, subtotal, o
                         <div className="flex gap-4 pt-2">
                             <div className="space-y-2 flex-1">
                                 <label className="text-sm font-medium text-white">Order Type</label>
-                                <select className="w-full bg-[#1F1D2B] cursor-pointer border border-[#393C49] text-white h-12 rounded-md px-3 appearance-none mt-1">
+                                <select value={orderType} onChange={(e) => setOrderType(e.target.value)} className="w-full bg-[#1F1D2B] cursor-pointer border border-[#393C49] text-white h-12 rounded-md px-3 appearance-none mt-1">
                                     <option>Dine In</option>
                                     <option>To Go</option>
                                     <option>Delivery</option>
@@ -162,7 +167,7 @@ export default function PaymentConfirmation({ isOpen, onClose, cart, subtotal, o
                             </div>
                             <div className="space-y-2 flex-1">
                                 <label className="text-sm font-medium text-white">Table no.</label>
-                                <Input placeholder="140" className="bg-[#1F1D2B] mt-1 border-[#393C49] text-white h-12" />
+                                <Input placeholder="140" value={tableNo} onChange={(e) => setTableNo(e.target.value)} className="bg-[#1F1D2B] mt-1 border-[#393C49] text-white h-12" />
                             </div>
                         </div>
                     </div>
@@ -175,7 +180,28 @@ export default function PaymentConfirmation({ isOpen, onClose, cart, subtotal, o
                         >
                             Cancel
                         </Button>
-                        <Button onClick={onSuccess} className="flex-1 h-12 bg-[#FFCA40] hover:bg-[#FFCA40]/90 text-white font-semibold shadow-lg shadow-[#FFCA40]/20 cursor-pointer">
+                        <Button
+                            onClick={() => {
+                                const mainMenu =
+                                    cart.length === 0
+                                        ? 'Unknown Menu'
+                                        : cart.length === 1
+                                            ? cart[0].name
+                                            : `${cart[0].name} and ${cart.length - 1} more`
+
+                                addOrder({
+                                    id: Date.now(),
+                                    customer: customerName || 'Guest',
+                                    avatar: '🧑',
+                                    menu: mainMenu,
+                                    totalPayment: `Rp. ${subtotal.toLocaleString('id-ID')}`,
+                                    status: "Pending"
+                                })
+
+                                onSuccess()
+                            }}
+                            className="flex-1 h-12 bg-[#FFCA40] hover:bg-[#FFCA40]/90 text-white font-semibold shadow-lg shadow-[#FFCA40]/20 cursor-pointer"
+                        >
                             Confirm Payment
                         </Button>
                     </div>

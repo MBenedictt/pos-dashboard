@@ -1,91 +1,25 @@
 'use client'
 
+import { useOrder } from "@/app/context/orderContext";
 import { Button } from "@/components/ui/button";
 import { Settings2 } from "lucide-react";
+import staticOrders from '../../app/data/order.json'
 
-interface Order {
-    id: number
-    customer: string
-    avatar: string
-    menu: string
-    totalPayment: string
-    status: 'Completed' | 'Preparing' | 'Pending'
-}
+// interface Order {
+//     id: number
+//     customer: string
+//     avatar: string
+//     menu: string
+//     totalPayment: string
+//     status: 'Completed' | 'Preparing' | 'Pending'
+// }
 
 export default function OrderReport() {
-    const orders: Order[] = [
-        {
-            id: 1,
-            customer: 'Sofian Hadi',
-            avatar: '🧑',
-            menu: 'Spicy seasoned seafood noodles',
-            totalPayment: 'Rp. 43.000',
-            status: 'Completed',
-        },
-        {
-            id: 2,
-            customer: 'Kadek',
-            avatar: '👨',
-            menu: 'Salted Pasta with mushroom sauce',
-            totalPayment: 'Rp. 35.000',
-            status: 'Preparing',
-        },
-        {
-            id: 3,
-            customer: 'Habil',
-            avatar: '👱',
-            menu: 'Beef dumpling in hot and sour soup',
-            totalPayment: 'Rp. 65.000',
-            status: 'Pending',
-        },
-        {
-            id: 4,
-            customer: 'Made',
-            avatar: '👨‍🦱',
-            menu: 'Hot spicy fried rice with omelet',
-            totalPayment: 'Rp. 57.000',
-            status: 'Completed',
-        },
-        {
-            id: 5,
-            customer: 'Diah',
-            avatar: '👩',
-            menu: 'Hot spicy fried rice with omelet',
-            totalPayment: 'Rp. 57.000',
-            status: 'Completed',
-        },
-        {
-            id: 6,
-            customer: 'Budi',
-            avatar: '👨‍💼',
-            menu: 'Hot spicy fried rice with omelet',
-            totalPayment: 'Rp. 57.000',
-            status: 'Completed',
-        },
-        {
-            id: 7,
-            customer: 'Thomas',
-            avatar: '👨‍🦱',
-            menu: 'Hot spicy fried rice with omelet',
-            totalPayment: 'Rp. 57.000',
-            status: 'Completed',
-        },
-        {
-            id: 8,
-            customer: 'Rina',
-            avatar: '👩',
-            menu: 'Chicken Katsu Curry',
-            totalPayment: 'Rp. 45.000',
-            status: 'Completed',
-        },
-        {
-            id: 9,
-            customer: 'Joko',
-            avatar: '👨',
-            menu: 'Beef Burger with Fries',
-            totalPayment: 'Rp. 60.000',
-            status: 'Preparing',
-        },
+    const { orders: contextOrders } = useOrder()
+
+    const combinedOrders = [
+        ...contextOrders,
+        ...staticOrders
     ]
 
     const getStatusColor = (status: string) => {
@@ -96,6 +30,8 @@ export default function OrderReport() {
             default: return 'bg-muted text-muted-foreground'
         }
     }
+
+    const { orders } = useOrder();
 
     return (
         <div className="w-full bg-[#1F1D2B] mt-4 rounded-lg flex flex-col overflow-hidden h-[600px] xl:h-full">
@@ -120,7 +56,7 @@ export default function OrderReport() {
                     </thead>
 
                     <tbody className="flex-1 overflow-y-auto block custom-scrollbar">
-                        {orders.map((order) => (
+                        {combinedOrders.map(order => (
                             <tr key={order.id} className="border-b border-[#393C49] hover:bg-[#252836] transition-colors table w-full table-fixed">
                                 <td className="py-4 w-[25%]">
                                     <div className="flex items-center space-x-3">

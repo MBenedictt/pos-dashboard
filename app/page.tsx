@@ -5,6 +5,7 @@ import DashboardView from "@/components/views/DashboardView"; // Import your new
 import OrderView from "@/components/views/OrderView";
 import MenuView from "@/components/views/MenuView";
 import { useState } from "react";
+import { OrderProvider } from "./context/orderContext";
 
 export default function Home() {
   const [activeNav, setActiveNav] = useState('order');
@@ -31,10 +32,12 @@ export default function Home() {
   };
 
   return (
-    <div className="flex h-screen max-xl:h-full bg-[#252836] text-white">
-      <Sidebar activeNav={activeNav} setActiveNav={setActiveNav} />
+    <OrderProvider>
+      <div className="flex h-screen max-xl:h-full bg-[#252836] text-white">
+        <Sidebar activeNav={activeNav} setActiveNav={setActiveNav} />
 
-      {renderContent()}
-    </div>
+        {renderContent()}
+      </div>
+    </OrderProvider>
   );
 }
