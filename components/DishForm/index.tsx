@@ -7,7 +7,8 @@ import { Button } from "../ui/button";
 interface AddDishModalProps {
     isOpen: boolean;
     onClose: () => void;
-    onSuccess?: () => void;
+    onSuccess: (data: any) => void;
+
 }
 
 export default function AddDishModal({ isOpen, onClose, onSuccess }: AddDishModalProps) {
@@ -107,7 +108,17 @@ export default function AddDishModal({ isOpen, onClose, onSuccess }: AddDishModa
                 <div className="flex-none p-6 pt-4 border-t border-[#393C49] flex gap-4">
                     <Button
                         className="cursor-pointer flex-1 h-12 bg-[#FFCA40] hover:bg-[#FFCA40]/90 text-white font-semibold shadow-lg shadow-[#FFCA40]/20"
-                        onClick={onSuccess}
+                        onClick={() => {
+                            onSuccess({
+                                id: Date.now(),
+                                name: formData.name,
+                                price: Number(formData.price),
+                                available: Number(formData.stock),
+                                category: activeTab,
+                                image: 'https://foodish-api.com/images/pasta/pasta1.jpg',
+                            });
+                            onClose();
+                        }}
                     >
                         Save
                     </Button>

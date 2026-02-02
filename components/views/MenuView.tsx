@@ -9,13 +9,16 @@ import DishForm from '../DishForm';
 import DishSuccessModal from '../DishSuccessModal';
 
 export default function MenuView() {
+    const [items, setItems] = useState(menuData);
     const [activeCategory, setActiveCategory] = useState('Hot Dishes');
     const [isDishFormOpen, setIsDishFormOpen] = useState(false);
     const [showModal, setShowModal] = useState(false);
 
     const categories = ['Hot Dishes', 'Cold Dishes', 'Soup', 'Grill', 'Appetizer', 'Dessert'];
 
-    const filteredItems = menuData.filter((item) => item.category === activeCategory);
+    const filteredItems = items.filter(
+        (item) => item.category === activeCategory
+    );
 
     return (
         <div className="flex-1 flex flex-col h-full p-6 overflow-hidden">
@@ -93,7 +96,9 @@ export default function MenuView() {
             <DishForm
                 isOpen={isDishFormOpen}
                 onClose={() => setIsDishFormOpen(false)}
-                onSuccess={() => { setShowModal(true) }}
+                onSuccess={(newItem) => {
+                    setItems((prev) => [newItem, ...prev]);
+                }}
             />
 
             <DishSuccessModal isOpen={showModal} onClose={() => { setShowModal(false); setIsDishFormOpen(false); }} />
